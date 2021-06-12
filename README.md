@@ -5,7 +5,7 @@
 # INTRODUCTION AND PROBLEM STATEMENT
 
 The Capstone project is the cornerstone project that is the essence of the Data Science Immersive program at General Assembly. The aviation industry is of great importance for a globally connected economy. Customer satisfaction with airlines and airport performance is considerably influenced by how much flights are delayed.
-I am very passionate about the airline industry decided to do my project with a dataset that is composed of domestic flights within the United States with data from January of 2019 to December of 2020. I wanted to make sure the dataset covered the pre-Covid 19 period as well as the year 2020. I will use the aggregate data for the years 2019 and 2020 to make some comparison on how the COVID-19 has impacted the airline industry and use the data from 2019 to run my machine learning algorithms to predict flight delays at arrivals. I have chosen the 20 busiest airports within the united states as well as four main airlines namely American, Delta, United and Southwest airlines.
+I am very passionate about the airline industry and decided to do my project with a dataset that is composed of domestic flights within the United States with data from January of 2019 to December of 2020. I wanted to make sure the dataset covered the pre-Covid 19 period as well as the year 2020. I will use the aggregate data for the years 2019 and 2020 to make some comparison on how the COVID-19 has impacted the airline industry and use the data from 2019 to run my machine learning algorithms to predict flight delays at arrivals. I have chosen the 20 busiest airports within the united states as well as four main airlines namely American, Delta, United and Southwest airlines.
 
 According to data from the United States Bureau of Transportation Statistics (BTS), almost 20% of flights within the U.S were delayed at arrival in 2019, which resulted in a severe economic impact equivalent to circa 41 billion US$ (A delayed flight is a flight that is delayed 15 minutes or more).
 
@@ -36,7 +36,7 @@ Let's take a look at the Pre-COVID-19 and during COVID-19 flights
 Figure 2. Total number of flights in january of 2019 and 2020 (Pre-Covid19) for the top 10 U.S airlines
 
 The above slide shows the total number of flights per airline in January of 2019 and 2020. As you can see 2020 was starting off as a great year for the airline industry. 
-According to Wikipedia the first cases in North America were reported in the United States on the 23 January 2020.
+According to Wikipedia the first cases in North America were reported in the United States on the 23rd of January 2020.
 
 ![Fig_08](img/fig_08.png)
 Figure 3. Total number of flights in July of 2019 and 2020 (During Covid19) for the top 10 U.S airlines
@@ -54,7 +54,7 @@ Figure 5. Stock prices and total number of flights for the top 4 major U.S airli
 
 Now that my data has been cleaned and preprocessed, it's time to start with the modeling phase which again as I sais earlier will focus on the year 2019 (pre-Covid19). We have a bianry classification problem here where a "0" will corresponfd to a flight being on time and a "1" means that the flight is delayed.
 
-I have tested the following machines learning algorithms appropraite for classification problems.
+I have tested the following machines learning algorithms appropriate for classification problems.
 
 1. Logistic Regression
 2. Decision Trees
@@ -71,6 +71,7 @@ One approach to addressing imbalanced datasets is to oversample the minority cla
 I created 2 sets of machine learning models, one for the imbalanced dataset and another one for the "Oversampled" balanced dataset.
 
 ![Fig_15](img/fig_15.png)
+
 Fig 6. On time and delayed flights data distribution for the year 2019
 
 ## MACHINE LEARNING
