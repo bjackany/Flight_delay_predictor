@@ -1,6 +1,9 @@
+# BEN JACKANY CAPSTONE PROJECT
+## FLIGHT DELAYS PREDICTIONS
+
 ![Fig_05](img/fig_05.png)
 
-# <font size="8"><b>PREDICTING ARRIVAL DELAYS FOR MAJOR US AIRLINES</b></font>
+# <font size="6"><b>PREDICTING ARRIVAL DELAYS FOR MAJOR US AIRLINES</b></font>
 
 # INTRODUCTION AND PROBLEM STATEMENT
 
@@ -11,14 +14,14 @@ According to data from the United States Bureau of Transportation Statistics (BT
 
 ![Fig_13](img/fig_13.png)
 
-Figure 1. Percentage of flight delays
+Figure 1. Percentage of on time and delayed flights
 
 # DATA COLLECTION AND EXPLORATION
 
 ### Overview of the data set
 
 My dataset has been taken from the United States government agency website that provides the air traffic delay statistics in the U.S.
-The U.S. Department of Transportation's (DOT) Bureau of Transportation Statistics performance of domestic flights operated by large air carriers. BTS compiles daily data for the benefit of the customers or for data practitioner like myself. The dataset is comprised of 2019, 2020 and the first 2 months of 2021 reporting on time performance.
+The U.S. Department of Transportation's (DOT) Bureau of Transportation Statistics (BTS) performance of domestic flights operated by large air carriers. BTS compiles daily data for the benefit of the customers or for data practitioner like myself. The dataset is comprised of 2019, 2020 and the first 2 months of 2021 reporting on time performance.
 
 I have included the following column headers: Year, Quarter, Month, DayofMonth, DayofWeek, flight date, Reporting_Airline, DOT_ID_Reporting_Airline, IATA_CODE_Reporting_Airline, Tail_Number, OriginAirportID, OriginAirportSeqID, OriginCityMarketID, Origin, OriginCityName, OriginState, OriginStateName, OriginWac, DestAirportID, DestAirportSeqID, DestCityMarketID, Dest, DestCityName, DestState, DestWac, CRSDepTime, DepTime, DepDelay, DepDelayMinutes, DepDel15,DepTimeBlk,CRSArrTime, ArrTime, ArrDelay, ArrDelayMinutes, ArrDel15, Cancelled, Flights and Distance.
 
@@ -50,9 +53,11 @@ The figure below show that the month of May 2020 was the lowest point
 ![Fig_14](img/fig_14.png)
 Figure 5. Stock prices and total number of flights for the top 4 major U.S airlines in 2019 and 2020
 
+The reason I compared the years 2019 and 2020 is to backup my rationale in choosing the year 2019 over 2020 for modeling purposes. The year 2020 was not an ordinary year by all measures.
+
 ## MODELING
 
-Now that my data has been cleaned and preprocessed, it's time to start with the modeling phase which again as I sais earlier will focus on the year 2019 (pre-Covid19). We have a bianry classification problem here where a "0" will corresponfd to a flight being on time and a "1" means that the flight is delayed.
+Now that my data has been cleaned and preprocessed, it's time to start with the modeling phase which again as I said earlier will focus on the year 2019 (pre-Covid19). We have a binary classification problem here where a "0" will corresponfd to a flight being on time and a "1" means that the flight is delayed.
 
 I have tested the following machines learning algorithms appropriate for classification problems.
 
@@ -76,25 +81,34 @@ Fig 6. On time and delayed flights data distribution for the year 2019
 
 ## MACHINE LEARNING
 
+![Fig_16](img/fig_16.png)
 
+We have a supervised learning task and all the models that I chose can be used for binary classifications. As you can see on the above figure, I chose Logistic regression, decision tree, Adaptive boosting, random forest and Neural networks. I also tried KNN, K-nearest neighbors however I did not have enough computing power to get meaningful results.
 
+![Fig_17](img/fig_17.png)
 
-
-
-
-
-
-
-
-
-
-
+We are comparing 5 models here: Logistic, decision tree, Adaboost, random forest and neural nets. 
+Remember we have a highly imbalanced dataset biased towards the majority class being on time flights. I did balance my dataset using scikit learn SMOTE (Synthetic Minority Oversampling Technique) . I also computed a baseline F1score of 67 percent using scikit learn dummy classifier.
+Random forest and Neural nets are the winners beating the baseline f1 score by 4 basis points and some of the other models by as much as 10 basis points.
 
 # CONCLUSIONS AND FUTURE WORK
 
+The airline business is a tough business. Profit margins are thin, fixed costs are high, capital expenditures are large and we even do not want to get into government regulations and other things.
+This business is very complicated, unpredictable and complex. There are lots of moving parts from the time you as a customer purchase a ticket to the time you reach your final destination and customer satisfaction is very important to the airlines and it does not help when flights are delayed.
+
+Now, can Flight delays be eliminated, I don't think so, can you minimize them with machine learning, absolutely. 
+
+My models unfortunately did not perform as expected and I believe, we can improve the  model’s performance by a) gathering more flight data, let’s say for 10 years or more, the data from the Bureau of transportation statistics is available since 1987, there is no shortage of data and b, focus on 1 destination airport for example Atlanta or JFK.
+
+We should be able then to predict the best day of the week and the time of the year to fly to minimize delays.
 
 
+# REFERENCES
+
+https://transtats.bts.gov/databases.asp?Z1qr_VQ=E&Z1qr_Qr5p=N8vn6v10&f7owrp6_VQF=D
+
+https://towardsdatascience.com/how-to-choose-the-right-machine-learning-algorithm-for-your-application-1e36c32400b9
+
+https://www.analyticsvidhya.com/blog/2020/10/overcoming-class-imbalance-using-smote-techniques/
 
 
-
-# BIBLIOGRAPHY
