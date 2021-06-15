@@ -96,9 +96,9 @@ Random forest and Neural nets are the winners beating the baseline f1 score by 4
 The airline business is a tough business. Profit margins are thin, fixed costs are high, capital expenditures are large and we even do not want to get into government regulations and other things.
 This business is very complicated, unpredictable and complex. There are lots of moving parts from the time you as a customer purchase a ticket to the time you reach your final destination and customer satisfaction is very important to the airlines and it does not help when flights are delayed.
 
-Now, can Flight delays be eliminated, I don't think so, can you minimize them with machine learning, absolutely. 
+Now, can Flight delays be eliminated? I don't think so, can we minimize them with machine learning, absolutely. 
 
-My models unfortunately did not perform as expected and I believe, we can improve the  model’s performance by a) gathering more flight data, let’s say for 10 years or more, the data from the Bureau of transportation statistics is available since 1987, there is no shortage of data and b, focus on 1 destination airport for example Atlanta or JFK.
+My models unfortunately did not perform as expected and I believe, we can improve the  model’s performance by a) gathering more flight data, let’s say for 10 years or more, the data from the Bureau of transportation statistics is available since 1987, there is no shortage of data and b) focus on 1 destination airport for example Atlanta or JFK.
 
 We should be able then to predict the best day of the week and the time of the year to fly to minimize delays.
 
